@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import { Routes, Route } from 'react-router';
+import { MainLayout } from './layouts/MainLayout';
+import MainPage from './pages/MainPage';
+import './scss/libs/app.scss';
+import '@fontsource/roboto/400.css';
+import NewsPage from './pages/NewsPage';
+import ProfilePage from './pages/ProfilePage';
+import { rightPassword, rightUsername } from './components/Header';
+import { useDispatch } from 'react-redux';
+import { changeLoginState } from './redux/slices/AuthorizationSlice/slice';
 
+const username = localStorage.getItem('username');
+const password = localStorage.getItem('password');
 function App() {
+  const dispatch = useDispatch();
+  username === rightUsername && password === rightPassword
+    ? dispatch(changeLoginState(true))
+    : dispatch(changeLoginState(false));
+  console.log(window.localStorage);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/test-app" element={<MainLayout />}>
+        <Route path="" element={<MainPage />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Route>
+    </Routes>
   );
 }
 

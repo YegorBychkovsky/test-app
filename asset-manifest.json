@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/testTask/static/css/main.1b53a5a9.css",
-    "main.js": "/testTask/static/js/main.7f92d3e6.js",
+    "main.js": "/testTask/static/js/main.0cf25251.js",
     "static/media/roboto-all-400-normal.woff": "/testTask/static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
     "static/media/roboto-latin-400-normal.woff2": "/testTask/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
     "static/media/roboto-cyrillic-ext-400-normal.woff2": "/testTask/static/media/roboto-cyrillic-ext-400-normal.804378952da8a10faae2.woff2",
@@ -14,10 +14,10 @@
     "index.html": "/testTask/index.html",
     "static/media/getFetch.cjs": "/testTask/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.1b53a5a9.css.map": "/testTask/static/css/main.1b53a5a9.css.map",
-    "main.7f92d3e6.js.map": "/testTask/static/js/main.7f92d3e6.js.map"
+    "main.0cf25251.js.map": "/testTask/static/js/main.0cf25251.js.map"
   },
   "entrypoints": [
     "static/css/main.1b53a5a9.css",
-    "static/js/main.7f92d3e6.js"
+    "static/js/main.0cf25251.js"
   ]
 }
